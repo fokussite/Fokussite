@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FOKUS Coffee — Степногорск</title>
+<meta name="description" content="FOKUS Coffee: Степногорскідегі кофейня. Дәмді кофе және десерт. Күнде 09:00 – 22:00.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000;
+  --panel:#141210;
+  --line:#2a2622;
+  --text:#fff;
+  --muted:#b8b0a6;
+  --crema:#d9b48a;
+  --wa:#25d366;
+  --r:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  font-size:20px;line-height:1.55;
+  padding-bottom:96px;
+  -webkit-text-size-adjust:100%;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h2{font-size:clamp(30px,7vw,44px);font-weight:800;line-height:1.1;margin-bottom:28px;letter-spacing:-.01em}
+p{color:var(--muted)}
+
+/* Buttons */
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  min-height:64px;padding:14px 24px;border-radius:var(--r);
+  font-size:21px;font-weight:700;text-align:center;
+  border:2px solid var(--line);background:var(--panel);color:var(--text);
+  transition:transform .15s,border-color .15s;
+}
+.btn:active{transform:scale(.97)}
+.btn:hover{border-color:var(--crema)}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#04210f}
+.btn.call{background:var(--text);border-color:var(--text);color:#000}
+:focus-visible{outline:3px solid var(--crema);outline-offset:3px}
+
+/* Hero */
+.hero{min-height:100svh;display:flex;align-items:center;padding:40px 0}
+.status{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:17px;font-weight:600;color:var(--muted);margin-bottom:28px;
+}
+.dot{width:12px;height:12px;border-radius:50%;background:#777}
+.status.open .dot{background:var(--wa);box-shadow:0 0 0 5px rgba(37,211,102,.18)}
+.focus{
+  position:relative;display:inline-block;
+  padding:28px 30px;margin:0 0 28px -6px;
+}
+/* камера фокусы белгісі — сайттың басты ерекшелігі */
+.focus i{position:absolute;width:30px;height:30px;border:3px solid var(--crema)}
+.focus i:nth-child(1){top:0;left:0;border-right:0;border-bottom:0;border-radius:10px 0 0 0}
+.focus i:nth-child(2){top:0;right:0;border-left:0;border-bottom:0;border-radius:0 10px 0 0}
+.focus i:nth-child(3){bottom:0;left:0;border-right:0;border-top:0;border-radius:0 0 0 10px}
+.focus i:nth-child(4){bottom:0;right:0;border-left:0;border-top:0;border-radius:0 0 10px 0}
+.focus h1{font-size:clamp(52px,16vw,128px);font-weight:800;line-height:.95;letter-spacing:-.03em}
+.focus h1 span{display:block;font-weight:400;color:var(--crema);font-size:.42em;letter-spacing:0;margin-top:10px}
+.tagline{font-size:clamp(26px,6vw,38px);color:var(--text);font-weight:600;margin-bottom:36px}
+.hero .actions{display:grid;gap:14px;max-width:460px}
+
+/* About */
+.about p{font-size:clamp(21px,4.5vw,26px);color:var(--text);max-width:680px}
+.about p + p{margin-top:18px;color:var(--muted);font-size:20px}
+
+/* Menu */
+.menu{display:grid;gap:16px}
+.card{
+  display:flex;justify-content:space-between;align-items:center;gap:18px;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  padding:26px 24px;
+}
+.card h3{font-size:26px;font-weight:800;line-height:1.2}
+.card p{font-size:18px;margin-top:4px}
+.price{font-size:26px;font-weight:800;color:var(--crema);white-space:nowrap}
+
+/* Why */
+.why{display:grid;gap:14px}
+.why div{
+  display:flex;align-items:center;gap:16px;
+  font-size:24px;font-weight:700;
+  padding:22px 24px;border-radius:var(--r);border:1px solid var(--line);
+}
+.why span{font-size:26px}
+
+/* Reviews */
+.reviews{display:grid;gap:16px}
+.review{background:var(--panel);border-radius:var(--r);padding:26px 24px;border-left:4px solid var(--crema)}
+.review p{color:var(--text);font-size:21px}
+.review b{display:block;margin-top:14px;font-size:17px;color:var(--muted);font-weight:600}
+
+/* Contact */
+.info{display:grid;gap:14px;margin-bottom:28px}
+.info div{padding:22px 24px;border-radius:var(--r);border:1px solid var(--line);background:var(--panel)}
+.info small{display:block;font-size:16px;color:var(--muted);margin-bottom:4px}
+.info strong{font-size:23px;font-weight:700}
+.links{display:grid;gap:14px}
+
+footer{padding:40px 0 20px;text-align:center;color:var(--muted);font-size:16px}
+
+/* Төменгі тұрақты батырмалар (телефон) */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:20;
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+  padding:12px 14px calc(12px + env(safe-area-inset-bottom,0px));
+  background:rgba(0,0,0,.92);border-top:1px solid var(--line);
+  backdrop-filter:blur(10px);
+}
+.bar .btn{min-height:56px;font-size:19px;padding:10px}
+
+@media(min-width:760px){
+  .menu,.why,.reviews,.links{grid-template-columns:1fr 1fr}
+  .reviews .review:last-child{grid-column:1/-1}
+  .info{grid-template-columns:1fr 1fr}
+  .hero .actions{grid-template-columns:1fr 1fr;max-width:620px}
+  body{padding-bottom:0}
+  .bar{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="hero" id="basy">
+  <div class="wrap">
+    <div class="status" id="status"><span class="dot"></span><span id="statusText">Степногорск · күнде 09:00 – 22:00</span></div>
+    <div class="focus">
+      <i></i><i></i><i></i><i></i>
+      <h1>FOKUS<span>Coffee</span></h1>
+    </div>
+    <p class="tagline">Дәмді, жылы, тез.</p>
+    <div class="actions">
+      <a class="btn wa" href="https://wa.me/77000000000?text=%D0%A1%D3%99%D0%BB%D0%B5%D0%BC%D0%B5%D1%82%D1%81%D1%96%D0%B7%20%D0%B1%D0%B5!%20FOKUS%20Coffee-%D0%B3%D0%B5%20%D0%B6%D0%B0%D0%B7%D1%8B%D0%BF%20%D0%B6%D0%B0%D1%82%D1%8B%D1%80%D0%BC%D1%8B%D0%BD." target="_blank" rel="noopener">💬 WhatsApp-қа жазу</a>
+      <a class="btn call" href="tel:+77000000000">📞 Қоңырау шалу</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="about" id="biz-turaly">
+    <div class="wrap">
+      <h2>Біз туралы</h2>
+      <p>FOKUS Coffee — Степногорскідегі кофейня. Біз әр кофені жаңа дайындаймыз, десертті күнде жаңа аламыз.</p>
+      <p>Жұмыстан кейін, достармен немесе жалғыз келіп отыруға болады. Жылы орын, тәтті иіс, жылдам қызмет.</p>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <h2>Қызметтер және бағалар</h2>
+      <div class="menu">
+        <div class="card"><div><h3>Капучино</h3><p>Жұмсақ көбікті, қою кофе</p></div><div class="price">1 200 тг</div></div>
+        <div class="card"><div><h3>Латте</h3><p>Сүті мол, жұмсақ дәм</p></div><div class="price">1 300 тг</div></div>
+        <div class="card"><div><h3>Американо</h3><p>Таза, күшті, жеңіл</p></div><div class="price">900 тг</div></div>
+        <div class="card"><div><h3>Чизкейк</h3><p>Нәзік, тәтті десерт</p></div><div class="price">1 500 тг</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="nege">
+    <div class="wrap">
+      <h2>Неге біз?</h2>
+      <div class="why">
+        <div><span>✅</span>Сапалы</div>
+        <div><span>✅</span>Әділ баға</div>
+        <div><span>✅</span>Жылдам</div>
+        <div><span>✅</span>Жаныңда</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pikir">
+    <div class="wrap">
+      <h2>Пікірлер</h2>
+      <div class="reviews">
+        <div class="review"><p>Кофесі өте дәмді, бағасы да қымбат емес. Күнде келемін!</p><b>Айгерім</b></div>
+        <div class="review"><p>Чизкейкі керемет. Қызметкерлер мейірімді, тез дайындайды.</p><b>Ержан</b></div>
+        <div class="review"><p>Тыныш, жылы орын. Достармен отыруға өте ыңғайлы.</p><b>Динара</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="baylanys">
+    <div class="wrap">
+      <h2>Байланыс</h2>
+      <div class="info">
+        <div><small>Адрес</small><strong>Степногорск, Микрорайон 2, 15</strong></div>
+        <div><small>Жұмыс уақыты</small><strong>09:00 – 22:00, күнде</strong></div>
+      </div>
+      <div class="links">
+        <a class="btn wa" href="https://wa.me/77000000000" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a class="btn call" href="tel:+77000000000">📞 Қоңырау шалу</a>
+        <a class="btn" href="https://instagram.com/fokus.coffee" target="_blank" rel="noopener">📷 Instagram: @fokus.coffee</a>
+        <a class="btn" href="https://www.tiktok.com/@fokus.coffee" target="_blank" rel="noopener">🎵 TikTok: @fokus.coffee</a>
+        <a class="btn" href="https://2gis.kz/search/FOKUS%20Coffee%20%D0%A1%D1%82%D0%B5%D0%BF%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA" target="_blank" rel="noopener">📍 2GIS-те ашу</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="year">2026</span> FOKUS Coffee · Степногорск</footer>
+
+<nav class="bar" aria-label="Жылдам байланыс">
+  <a class="btn wa" href="https://wa.me/77000000000" target="_blank" rel="noopener">💬 WhatsApp</a>
+  <a class="btn call" href="tel:+77000000000">📞 Қоңырау</a>
+</nav>
+
+<script>
+(function(){
+  document.getElementById('year').textContent=new Date().getFullYear();
+  try{
+    // Қазақстан уақыты (UTC+5) бойынша ашық/жабық екенін көрсету
+    var h=+new Intl.DateTimeFormat('en-GB',{hour:'2-digit',hour12:false,timeZone:'Asia/Almaty'}).format(new Date());
+    var open=h>=9&&h<22;
+    var s=document.getElementById('status');
+    document.getElementById('statusText').textContent=open
+      ?'Қазір ашық · 22:00-ге дейін'
+      :'Қазір жабық · 09:00-де ашамыз';
+    if(open)s.classList.add('open');
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
