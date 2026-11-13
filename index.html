@@ -3,104 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ержан & Мөлдір - Қоныс той 12.12.2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<title>fokussite — Барлық кәсіпке сайт</title>
 <style>
-:root{--gold:#c5a66b;--gold2:#a78953;--dark:#2b2118}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#f8f3eb;color:#2b2118;font-family:'Montserrat',sans-serif;text-align:center}
-#envelope{position:fixed;inset:0;z-index:99999;background:radial-gradient(ellipse at 50% 20%,#fff,#fffdf8 30%,#f8f3eb 60%,#eaddc0);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:1.2s;cursor:pointer}
-#envelope.hide{transform:translateY(-115%);opacity:0;pointer-events:none}
-.env-body{width:340px;height:220px;background:linear-gradient(145deg,#e8c87a,#c5a66b,#a58a5d);border-radius:16px;position:relative;box-shadow:0 30px 60px rgba(139,115,53,.3)}
-.seal{position:absolute;top:58%;left:50%;transform:translate(-50%,-50%);width:92px;height:92px;background:#2b2118;border-radius:50%;display:grid;place-items:center;color:#f7e7d0;font-family:'Cormorant Garamond';font-size:32px;border:2px solid #e8c87a;z-index:5}
-.hero{min-height:100vh;display:flex;justify-content:center;padding:24px 16px}
-.card{max-width:700px;width:100%;background:#fffdf8;border:1px solid #e8d9b8;outline:6px double var(--gold);outline-offset:10px;padding:40px 18px;box-shadow:0 20px 80px rgba(139,115,53,.18)}
-.names{font-family:'Great Vibes';font-size:72px;color:var(--gold2);margin:20px 0}
-.small{font-size:10px;letter-spacing:5px;color:var(--gold2)}
-.photoWrap{width:100%;max-width:420px;margin:20px auto;border:6px solid #fff;box-shadow:0 10px 25px #0002;border-radius:12px;overflow:hidden;background:#fff}
-.photoWrap video,.photoWrap img{width:100%;display:block}
-.box{background:#fff;border:1px solid #f0dfbd;border-radius:20px;padding:22px 16px;margin:20px auto;max-width:520px}
-.count{display:flex;justify-content:center;gap:8px;margin-top:16px}
-.count .c{background:#fffdf8;border:1px solid var(--gold);min-width:74px;padding:12px;border-radius:14px}
-.count .c b{display:block;font-size:24px;color:var(--gold2)} .count .c i{font-style:normal;font-size:9px}
-.btn{display:inline-block;padding:15px 26px;border-radius:50px;text-decoration:none;font-size:11px;letter-spacing:2px;font-weight:600;margin:5px;border:none;cursor:pointer}
-.btn-dark{background:var(--dark);color:#fff} .btn-gold{background:linear-gradient(145deg,#e8c87a,#c5a66b);color:#2b2118}
-.btn-light{background:#fff;color:var(--gold2);border:1px solid var(--gold)} .btn-yes{background:#2e7d32;color:#fff} .btn-no{background:#eee;color:#333;border:1px solid #ccc}
-.musicBtn{position:fixed;right:16px;bottom:16px;z-index:9000;width:60px;height:60px;border-radius:50%;background:#fff;border:2px solid var(--gold);display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.2);cursor:pointer;font-size:24px;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+body{background:#f7fbff;color:#0a2a4a}
+header{background:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;box-shadow:0 2px 15px rgba(0,0,0,.06);z-index:10}
+.logo{font-size:26px;font-weight:900;color:#0097b2}
+.logo span{color:#e8b44a}
+.btn{background:#0097b2;color:#fff;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:700;display:inline-block}
+.hero{padding:50px 20px;text-align:center;background:linear-gradient(135deg,#0097b2,#0a2a6b);color:#fff;border-radius:0 0 30px 30px}
+.hero h1{font-size:34px;line-height:1.2}
+.hero h1 span{color:#ffd66e}
+.hero p{margin:16px 0 24px;opacity:.9;font-size:17px}
+.hero .btn{background:#ffd66e;color:#0a2a4a}
+.wrap{padding:24px 16px;max-width:1000px;margin:auto}
+h2{text-align:center;margin-bottom:18px;font-size:26px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:#fff;padding:20px;border-radius:18px;box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.card b{font-size:18px}
+.card p{font-size:14px;color:#555;margin:8px 0 12px;line-height:1.5}
+.card a{color:#0097b2;font-weight:700;text-decoration:none}
+.price{background:#fff;border:2px solid #0097b2;border-radius:18px;padding:22px;text-align:center;margin-top:14px}
+.price h3{font-size:28px;color:#0097b2}
+.price p{margin:10px 0;color:#555}
+footer{background:#0a2a6b;color:#fff;text-align:center;padding:30px 20px;margin-top:30px;border-radius:30px 30px 0 0}
+footer a{color:#ffd66e;font-weight:700;text-decoration:none;font-size:19px}
+.shanyrak{font-size:50px}
 </style>
 </head>
 <body>
-<div id="envelope" onclick="openInvite()">
-  <div class="env-body"><div class="seal">Е & М</div></div>
-  <div style="margin-top:30px"><div style="font-family:'Great Vibes';font-size:44px;color:var(--gold2)">Ержан & Мөлдір</div><div style="margin-top:16px;border:1px solid var(--gold);padding:12px 32px;border-radius:50px;background:#fff;font-size:11px;letter-spacing:4px">ШАҚЫРУДЫ АШУ ✨</div><div style="margin-top:8px;font-size:9px;letter-spacing:2px;color:#a58a5d">БАСЫП, ӘНДІ ТЫҢДАҢЫЗ 🎵</div></div>
+
+<header>
+<div class="logo">fokus<span>site</span></div>
+<a class="btn" href="#contact">Тапсырыс беру</a>
+</header>
+
+<div class="hero">
+<div class="shanyrak">☀️</div>
+<h1>Барлық кәсіпке<br><span>әдемі сайт</span> жасаймыз</h1>
+<p>Той • Кафе • Дүкен • Салон • Сұлулық • Кез келген бизнес<br>1-2 күнде дайын. Телефонда керемет көрінеді.</p>
+<a class="btn" href="#contact">Сайтқа тапсырыс беру →</a>
 </div>
 
-<audio id="bgAudio" loop preload="auto" playsinline>
-  <source src="music.mp3" type="audio/mpeg">
-  <source src="moldir.mp4" type="video/mp4">
-  <source src="https://cdn.pixabay.com/audio/2022/10/30/audio_8c8a64d6a3.mp3" type="audio/mpeg">
-</audio>
-<button class="musicBtn" id="musicBtn" onclick="toggleMusic()">🎵</button>
-
-<div class="hero"><div class="card">
-<div class="small">QONYS TOI</div>
-<div class="names">Ержан & Мөлдір</div>
-<h1 style="font-family:'Cormorant Garamond';letter-spacing:5px">ҚОНЫС ТОЙ</h1>
-<div style="width:80px;height:1px;background:var(--gold);margin:20px auto"></div>
-
-<div class="photoWrap">
-  <video autoplay loop muted playsinline poster="erjan.jpg">
-    <source src="moldir.mp4" type="video/mp4">
-  </video>
-  <div style="padding:10px;font-size:11px;letter-spacing:3px;background:#fffdf8">МӨЛДІР - ҚАЗАҚИ НАҚЫШ</div>
+<div class="wrap">
+<h2>Қандай сайт керек?</h2>
+<div class="grid">
+<div class="card"><b>💍 Тойға сайт</b><p>Шақыру, қонақтар тізімі, фото, карта, кері санақ</p><a href="#">Мысалды көру →</a></div>
+<div class="card"><b>🍔 Кафе / Дүкен</b><p>Мәзір, бағалар, WhatsApp тапсырыс, мекен-жай</p><a href="#">Мысалды көру →</a></div>
+<div class="card"><b>💅 Салон / Сұлулық</b><p>Қызметтер, бағалар, жазылу, жұмыстар фотосы</p><a href="#">Мысалды көру →</a></div>
+<div class="card"><b>🏢 Кез келген бизнес</b><p>Сенің кәсібіңе арналған жеке сайт — бағасын сұра</p><a href="#">Мысалды көру →</a></div>
 </div>
 
-<div class="photoWrap"><img src="erjan.jpg" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600'"><div style="padding:10px;font-size:11px;letter-spacing:3px;background:#fffdf8">ЕРЖАН САЙЛАНБЕК</div></div>
-
-<div class="box">
-<div class="small">КҮНІ МЕН УАҚЫТЫ</div>
-<div style="font-family:'Cormorant Garamond';font-size:32px;font-weight:600;margin-top:8px">12 ЖЕЛТОҚСАН 2026 • 12:00</div>
-<div class="count"><div class="c"><b id="d">00</b><i>КҮН</i></div><div class="c"><b id="h">00</b><i>САҒАТ</i></div><div class="c"><b id="m">00</b><i>МИН</i></div><div class="c"><b id="s">00</b><i>СЕК</i></div></div>
+<div class="price">
+<h3>Бағасы — 15 000 ₸ -нан</h3>
+<p>Дизайн + сайт + WhatsApp батырмасы + доменге қосу<br>Төлем — Kaspi / Halyk</p>
+<a class="btn" href="#contact">Бағаны нақтылау</a>
+</div>
 </div>
 
-<div class="box">
-<div class="small">МЕКЕН-ЖАЙ</div>
-<div style="font-size:20px;font-weight:600;margin-top:8px">Сембинова 10/4, Астана</div>
-<a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=Сембинова+10/4+Астана" target="_blank">📍 GOOGLE MAPS</a>
-<a class="btn btn-light" href="https://2gis.kz/astana/search/Сембинова%2010%2F4" target="_blank">2GIS</a>
-</div>
+<footer id="contact">
+<h2 style="color:#fff">Тапсырыс беру</h2>
+<p style="margin:12px 0">WhatsApp-қа жаз — 10 минутта жауап береміз</p>
+<a href="https://wa.me/77000000000">WhatsApp-қа жазу 💬</a>
+<p style="margin-top:20px;opacity:.7;font-size:13px">© 2026 fokussite • Степногорск • Қазақстан</p>
+</footer>
 
-<div class="box">
-<div class="small">РАСТАУ</div>
-<a class="btn btn-yes" href="https://wa.me/77082418836?text=✅ Келемін 12.12.2026" target="_blank">✅ ИӘ, КЕЛЕМІН</a>
-<a class="btn btn-no" href="https://wa.me/77082418836?text=❌ Келе алмаймын" target="_blank">❌ КЕЛЕ АЛМАЙМЫН</a><br>
-<a class="btn btn-dark" href="https://wa.me/77082418836?text=Тілегім:" target="_blank">💌 ТІЛЕК ЖАЗУ</a>
-</div>
-
-<div class="box">
-<button class="btn btn-gold" onclick="navigator.share?navigator.share({title:'Қоныс той',url:location.href}):copyLink()">🔗 БӨЛІСУ</button>
-<button class="btn btn-light" onclick="copyLink()">📋 КӨШІРУ</button>
-</div>
-
-<div style="font-size:9px;letter-spacing:4px;color:#a58a5d;margin-top:20px">ЕРЖАН & МӨЛДІР • 12.12.2026 • +7 708 241 88 36</div>
-</div></div>
-
-<script>
-let playing=false;
-function openInvite(){
-  document.getElementById('envelope').classList.add('hide');
-  let a=document.getElementById('bgAudio');a.volume=0.8;
-  a.play().then(()=>{playing=true;document.getElementById('musicBtn').textContent='🎵';}).catch(()=>{document.getElementById('musicBtn').textContent='🔇';});
-}
-function toggleMusic(){
-  let a=document.getElementById('bgAudio');
-  if(playing){a.pause();document.getElementById('musicBtn').textContent='🔇';}else{a.play();document.getElementById('musicBtn').textContent='🎵';}
-  playing=!playing;
-}
-const t=new Date("2026-12-12T12:00:00+05:00").getTime();
-setInterval(()=>{let d=t-Date.now();if(d<=0)return;document.getElementById('d').textContent=Math.floor(d/86400000);document.getElementById('h').textContent=String(Math.floor(d%86400000/3600000)).padStart(2,'0');document.getElementById('m').textContent=String(Math.floor(d%3600000/60000)).padStart(2,'0');document.getElementById('s').textContent=String(Math.floor(d%60000/1000)).padStart(2,'0');},1000);
-function copyLink(){navigator.clipboard.writeText(location.href).then(()=>alert('✅ Көшірілді: '+location.href));}
-</script>
 </body>
-  </html>
+</html>
